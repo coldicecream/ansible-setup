@@ -18,7 +18,7 @@ jobs:
         run: "sed -i 's/user: michael/user: runner/g' vars/user_environment.yml"
 
       - name: Bootstrap the environment
-        run: sudo sh bootstrap.sh
+        run: sudo sh setup.sh
         
       - name: Attempt to provision the box
         run: ansible-playbook -K playbook.yaml
