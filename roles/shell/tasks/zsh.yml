@@ -36,3 +36,14 @@
 - name: Clone powerlevel10k
   command: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git {{ lookup("env", "HOME") }}/.oh-my-zsh/custom/themes/powerlevel10k
   when: not powerlevel10k.stat.exists
+
+- name: Check for pure
+  stat: path=/$HOME/.oh-my-zsh/custom/themes/pure
+  register: pure
+
+- name: Clone pure
+  command: git clone https://github.com/sindresorhus/pure.git {{ lookup("env", "HOME") }}/.zsh/pure
+  when: not pure.stat.exists
+
+
+
