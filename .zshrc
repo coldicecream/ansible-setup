@@ -4,11 +4,18 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/michael/.oh-my-zsh"
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+
+fpath+=($HOME/.zsh/pure)
+
+autoload -U promptinit; promptinit
+prompt pure
+
+#ZSH_THEME="pure"
 #POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs vi_mode)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
