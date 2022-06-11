@@ -3,5 +3,5 @@ user: michael
 repo_directory: workspace
 repos:
 dotfiles_repo: coldicecream/dotfiles
-dotfiles_branch: master
+dotfiles_branch: main
 dotfiles_command: sh dotfile_setup.sh
