@@ -38,7 +38,7 @@
   when: not powerlevel10k.stat.exists
 
 - name: Check for pure
-  stat: path=/$HOME/.oh-my-zsh/custom/themes/pure
+  stat: path=/$HOME/.zsh/pure
   register: pure
 
 - name: Clone pure
