@@ -1,0 +1,6 @@
+---
+backup_drive_uuid: "55ecd238-5bcf-42b8-acd9-af2bd628eda7"
+backup_drive_fstype: "ext4"
+backup_drive_mount_point: "/mnt/backup"
+backup_relative_path: "machines"
+

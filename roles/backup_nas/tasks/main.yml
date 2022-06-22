@@ -1,0 +1,9 @@
+---
+
+- name: Mount backup drive
+  mount:
+    path: "{{ backup_drive_mount_point }}"
+    src: UUID={{ backup_drive_uuid }}
+    fstype: "{{ backup_drive_fstype }}"
+    state: mounted
+
