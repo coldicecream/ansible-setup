@@ -1,10 +1,11 @@
 ---
 - name: Provision a backup NAS server on Raspberry Pi
   hosts: backup_server
-  remote_user: user
+  remote_user: michael
   become: yes
   vars_files:
     - host_vars/raspberrypi1.yml
   roles:
+    - common
     - backup_nas
 

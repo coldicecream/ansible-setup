@@ -14,3 +14,20 @@
   become: true
   apt:
     name: "{{ prerequisite_packages }}"
+
+- name: Install Uncomplicated FireWall (ufw)
+  apt:
+    name: ufw
+    state: present
+    update_cache: yes
+
+- name: Firewall config - enable and deny all by default
+  ufw:
+    state: enabled
+    policy: deny
+
+- name: Firewall config - allow port 22 from 192.168.2.1/16
+  ufw:
+    rule: allow
+    port: 22
+    src: 192.168.2.1/16
