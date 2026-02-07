@@ -1,0 +1,11 @@
+---
+- name: Install npm
+  become: true
+  apt:
+    name: npm
+    state: present
+
+- name: Install uv
+  shell: curl -LsSf https://astral.sh/uv/install.sh | sh
+  args:
+    creates: "{{ ansible_env.HOME }}/.local/bin/uv"
